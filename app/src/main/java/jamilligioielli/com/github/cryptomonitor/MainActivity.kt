@@ -1,47 +1,24 @@
- package jamilligioielli.com.github.cryptomonitor
+package jamilligioielli.com.github.cryptomonitor
 
 import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import jamilligioielli.com.github.cryptomonitor.ui.theme.CryptomonitorTheme
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
+import jamilligioielli.com.github.cryptomonitor.R
 
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContent {
-            CryptomonitorTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
-            }
-        }
+        setContentView(R.layout.activity_main)
+
+        // Configurando a toolbar
+        val toolbarMain: Toolbar = findViewById(R.id.toolbar_main)
+        configureToolbar(toolbarMain)
     }
-}
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    CryptomonitorTheme {
-        Greeting("Android")
+    private fun configureToolbar(toolbar: Toolbar) {
+        setSupportActionBar(toolbar)
+        toolbar.setTitleTextColor(getColor(R.color.white))
+        supportActionBar?.title = getText(R.string.app_title)
+        supportActionBar?.setBackgroundDrawable(getDrawable(R.color.primary))
     }
 }
