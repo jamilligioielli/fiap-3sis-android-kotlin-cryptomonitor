@@ -8,10 +8,12 @@
 O projeto Cryptomonitor é uma aplicação Android criada para verificação da cotação mais atual de BITCOINs.
 
 A página inicial da aplicação apresenta informaçãoes básicas sobre a quotação, a data e hora atual e um botão para atualização do valor da quotação bem como da data/hora.
+
 ![inicial](./imgs/tela-inicial.png)
 
 
 Ao pressionar o botão "Atualizar", os valores são modificados. A cada vez que essa ação se repete, a mudança dos valores de acordo com a data/hora é percebida.
+
 ![atualizado](./imgs/tela-cotacao-atualizada.png)
 
 ## Estrutura
