@@ -1,4 +1,9 @@
-# fiap-3sis-cross-platform
-Desenvolvimento Cross Platform com Flutter e Dart
+# fiap-3sis-cryptomonitor
 
-[Material da disciplina](https://flutter-learn-green.vercel.app/)
+1. [Sobre](#sobre)
+
+## Sobre
+
+O projeto Cryptomonitor é uma aplicação Android criada para verificação da cotação mais atual de BITCOINs.
+
+
